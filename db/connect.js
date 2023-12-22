@@ -1,4 +1,4 @@
-// mongoose our data driver 
+// mongoose our ODM (Object Document Mapper)
 
 import mongoose from "mongoose";
 

@@ -4,6 +4,8 @@ import useSWR from "swr";
 import Form from "../../../components/Form.js";
 import { StyledLink } from "../../../components/StyledLink.js";
 
+// this is the edit site
+
 export default function EditPage() {
   const router = useRouter();
   const { isReady } = router;
@@ -20,7 +22,7 @@ export default function EditPage() {
     });
 
     if (response.ok) {
-      router.push(`/places/${id}`);
+      router.push(`/places/${id}`);  // brings you back to the details page
     }
   }
 

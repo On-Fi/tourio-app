@@ -6,6 +6,8 @@ import { StyledLink } from "../../../components/StyledLink.js";
 import { StyledButton } from "../../../components/StyledButton.js";
 import { StyledImage } from "../../../components/StyledImage.js";
 
+// this is the details page
+
 const ImageContainer = styled.div`
   position: relative;
   height: 15rem;
@@ -25,10 +27,10 @@ const ButtonContainer = styled.section`
 const StyledLocationLink = styled(StyledLink)`
   text-align: center;
   background-color: white;
-  border: 3px solid lightsalmon;
+  border: 3px solid red;
 `;
 
-export default function DetailsPage() {
+export default function DetailsPage() { //this function generates every detailespage for every place
   const router = useRouter();
   const { isReady } = router;
   const { id } = router.query;
@@ -37,12 +39,12 @@ export default function DetailsPage() {
 
   if (!isReady || isLoading || error) return <h2>Loading...</h2>;
 
-  async function deletePlace() {
+  async function deletePlace() {      //this function deletes a place
     await fetch(`/api/places/${id}`, {
       method: "DELETE",
     });
 
-    router.push("/");
+    router.push("/");  // brings you after deleting a place back to the homepage 
   }
 
   return (

@@ -4,6 +4,8 @@ import useSWR from "swr";
 import Link from "next/link.js";
 import { StyledLink } from "../components/StyledLink.js";
 
+// this is the homepage
+
 const List = styled.ul`
   list-style: none;
   display: flex;
